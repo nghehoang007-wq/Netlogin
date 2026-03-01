@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tool Tạo Bookmarklet Netflix</title>
+    <title>Tool Tạo Bookmarklet Netflix v2.0</title>
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #141414; color: #fff; padding: 30px; display: flex; flex-direction: column; align-items: center; }
         h2 { color: #e50914; }
@@ -16,10 +16,10 @@
 </head>
 <body>
 
-    <h2>🔥 TRÌNH TẠO JAVASCRIPT NẠP COOKIE NETFLIX 🔥</h2>
+    <h2>🔥 TRÌNH TẠO JAVASCRIPT NẠP COOKIE NETFLIX (v2.0) 🔥</h2>
     
-    <p>Dán toàn bộ mã JSON hoặc chuỗi Cookie thô của bạn vào đây:</p>
-    <textarea id="cookieInput" rows="10" placeholder='Ví dụ: [{"name": "NetflixId", "value": "..."}, ...]'></textarea>
+    <p>Dán Cookie vào đây (Hỗ trợ: JSON, Chuỗi Netscape, Chuỗi Text F12):</p>
+    <textarea id="cookieInput" rows="10" placeholder='Dán Cookie lộn xộn vào đây...'></textarea>
     
     <button onclick="convertCookie()">Tạo Mã JavaScript</button>
 
@@ -39,20 +39,34 @@
                 return;
             }
 
+            // 1. Thử giải mã JSON
             try {
-                // Thử phân tích cú pháp dạng JSON (Nếu xuất từ Cookie-Editor)
                 let data = JSON.parse(input);
                 data.forEach(item => {
                     if (item.name === "NetflixId") netflixId = item.value;
                     if (item.name === "SecureNetflixId") secureNetflixId = item.value;
                 });
             } catch (e) {
-                // Nếu không phải JSON, thử trích xuất từ chuỗi Text thô
-                let matchNid = input.match(/NetflixId=([^;]+)/);
-                let matchSnid = input.match(/SecureNetflixId=([^;]+)/);
-                
-                if (matchNid) netflixId = matchNid[1];
-                if (matchSnid) secureNetflixId = matchSnid[1];
+                // 2. Nếu không phải JSON, thử định dạng cột Tab (Netscape)
+                let lines = input.split('\n');
+                for (let line of lines) {
+                    let parts = line.split('\t');
+                    // Định dạng Netscape thường có 7 cột, cột 5 là Tên, cột 6 là Giá trị
+                    if (parts.length >= 7) {
+                        let name = parts[5].trim();
+                        let value = parts[6].trim();
+                        if (name === "NetflixId") netflixId = value;
+                        if (name === "SecureNetflixId") secureNetflixId = value;
+                    }
+                }
+
+                // 3. Nếu vẫn không có, thử dạng chuỗi Text thô (Name=Value;)
+                if (!netflixId || !secureNetflixId) {
+                    let matchNid = input.match(/NetflixId=([^;\s]+)/);
+                    let matchSnid = input.match(/SecureNetflixId=([^;\s]+)/);
+                    if (matchNid) netflixId = matchNid[1].trim();
+                    if (matchSnid) secureNetflixId = matchSnid[1].trim();
+                }
             }
 
             let outputBox = document.getElementById("resultOutput");
@@ -61,7 +75,7 @@
                 let jsCode = `javascript:document.cookie="NetflixId=${netflixId};domain=.netflix.com;path=/;secure";document.cookie="SecureNetflixId=${secureNetflixId};domain=.netflix.com;path=/;secure";alert("Nạp Cookie Thành Công! Hãy Tải lại trang (F5).");`;
                 outputBox.value = jsCode;
             } else {
-                outputBox.value = "❌ LỖI: Không tìm thấy 'NetflixId' hoặc 'SecureNetflixId' trong dữ liệu bạn vừa dán. Vui lòng kiểm tra lại!";
+                outputBox.value = "❌ LỖI: Không tìm thấy 'NetflixId' hoặc 'SecureNetflixId'. Hãy chắc chắn bạn copy đủ dữ liệu!";
             }
         }
     </script>
