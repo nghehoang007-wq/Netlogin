@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Tạo Bookmarklet Netflix</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #141414; color: #fff; padding: 30px; display: flex; flex-direction: column; align-items: center; }
+        h2 { color: #e50914; }
+        textarea { width: 100%; max-width: 800px; padding: 15px; border-radius: 8px; border: 1px solid #333; background-color: #222; color: #0f0; font-family: monospace; resize: vertical; margin-bottom: 15px; }
+        button { background-color: #e50914; color: white; border: none; padding: 12px 24px; font-size: 16px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background 0.3s; }
+        button:hover { background-color: #f40612; }
+        .result-box { margin-top: 20px; width: 100%; max-width: 800px; }
+        #resultOutput { background-color: #1a1a1a; color: #ffeb3b; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h2>🔥 TRÌNH TẠO JAVASCRIPT NẠP COOKIE NETFLIX 🔥</h2>
+    
+    <p>Dán toàn bộ mã JSON hoặc chuỗi Cookie thô của bạn vào đây:</p>
+    <textarea id="cookieInput" rows="10" placeholder='Ví dụ: [{"name": "NetflixId", "value": "..."}, ...]'></textarea>
+    
+    <button onclick="convertCookie()">Tạo Mã JavaScript</button>
+
+    <div class="result-box">
+        <p><strong>Kết quả (Copy toàn bộ khung dưới đây):</strong></p>
+        <textarea id="resultOutput" rows="5" readonly placeholder="Mã JavaScript sẽ xuất hiện ở đây..."></textarea>
+    </div>
+
+    <script>
+        function convertCookie() {
+            let input = document.getElementById("cookieInput").value.trim();
+            let netflixId = "";
+            let secureNetflixId = "";
+
+            if (!input) {
+                alert("Vui lòng dán Cookie vào trước!");
+                return;
+            }
+
+            try {
+                // Thử phân tích cú pháp dạng JSON (Nếu xuất từ Cookie-Editor)
+                let data = JSON.parse(input);
+                data.forEach(item => {
+                    if (item.name === "NetflixId") netflixId = item.value;
+                    if (item.name === "SecureNetflixId") secureNetflixId = item.value;
+                });
+            } catch (e) {
+                // Nếu không phải JSON, thử trích xuất từ chuỗi Text thô
+                let matchNid = input.match(/NetflixId=([^;]+)/);
+                let matchSnid = input.match(/SecureNetflixId=([^;]+)/);
+                
+                if (matchNid) netflixId = matchNid[1];
+                if (matchSnid) secureNetflixId = matchSnid[1];
+            }
+
+            let outputBox = document.getElementById("resultOutput");
+
+            if (netflixId && secureNetflixId) {
+                let jsCode = `javascript:document.cookie="NetflixId=${netflixId};domain=.netflix.com;path=/;secure";document.cookie="SecureNetflixId=${secureNetflixId};domain=.netflix.com;path=/;secure";alert("Nạp Cookie Thành Công! Hãy Tải lại trang (F5).");`;
+                outputBox.value = jsCode;
+            } else {
+                outputBox.value = "❌ LỖI: Không tìm thấy 'NetflixId' hoặc 'SecureNetflixId' trong dữ liệu bạn vừa dán. Vui lòng kiểm tra lại!";
+            }
+        }
+    </script>
+
+</body>
+</html>
