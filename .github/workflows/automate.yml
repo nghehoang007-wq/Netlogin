@@ -30,7 +30,7 @@ jobs:
                   if os.path.isfile(filepath):
                       with open(filepath, 'r', encoding='utf-8') as f:
                           content = f.read()
-                          # Regex siêu cấp: Chỉ lấy mã nếu dài trên 20 ký tự (tránh lấy nhầm dấu phẩy)
+                          # Regex siêu cấp: Chỉ lấy mã nếu dài trên 20 ký tự
                           n_match = re.search(r'NetflixId["\s=|\t]+((?:ct|v%3D)[^\s"|;]{20,})', content)
                           s_match = re.search(r'SecureNetflixId["\s=|\t]+(v%3D3%26mac%3D[^\s"|;]{20,})', content)
                           
@@ -41,19 +41,17 @@ jobs:
               print("❌ Khong tim thay acc hop le!")
               exit(1)
 
-          # JS Payload Integration with safe brace escapes for YAML blocks
           js_code = f"""
           const pool = {json.dumps(cookie_pool)};
           const pick = pool[Math.floor(Math.random() * pool.length)];
           document.cookie = "NetflixId=" + pick.n + ";domain=.netflix.com;path=/;secure";
           document.cookie = "SecureNetflixId=" + pick.s + ";domain=.netflix.com;path=/;secure";
-          
           alert("Nạp acc thành công! Kho đang có: {len(cookie_pool)} acc.");
-          
           if (typeof completion === "function") {{
               completion();
+          }} else {{
+              console.log("Môi trường không hỗ trợ completion");
           }}
-          
           window.location.reload();
           """
           with open(output_file, 'w', encoding='utf-8') as f:
