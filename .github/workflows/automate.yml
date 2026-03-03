@@ -1,3 +1,21 @@
+name: Manual Convert Cookie
+
+on:
+  push:
+    paths:
+      - input_cookies/**
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
       - name: Generate script.js
         run: |
           cat << 'EOF' > generate.py
@@ -44,3 +62,11 @@ print("Generated script.js successfully.")
 EOF
 
           python3 generate.py
+
+      - name: Push Result
+        run: |
+          git config --global user.name "NetBot"
+          git config --global user.email "bot@github.com"
+          git add script.js
+          git commit -m "Auto Update $(date)" || exit 0
+          git push
