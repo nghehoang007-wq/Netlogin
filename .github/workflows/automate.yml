@@ -41,28 +41,24 @@ jobs:
               print("❌ Khong tim thay acc hop le!")
               exit(1)
 
+          # JS Payload Integration with safe brace escapes for YAML blocks
           js_code = f"""
           const pool = {json.dumps(cookie_pool)};
           const pick = pool[Math.floor(Math.random() * pool.length)];
-
-          // 1. Bơm Cookie vào hệ thống
           document.cookie = "NetflixId=" + pick.n + ";domain=.netflix.com;path=/;secure";
           document.cookie = "SecureNetflixId=" + pick.s + ";domain=.netflix.com;path=/;secure";
-
-          // 2. Thông báo cho người dùng
+          
           alert("Nạp acc thành công! Kho đang có: {len(cookie_pool)} acc.");
-
-          // 3. Báo cáo hoàn thành cho Phím tắt TRƯỚC khi tải lại trang
+          
           if (typeof completion === "function") {{
               completion();
           }}
-
-          // 4. Cuối cùng mới làm mới trang web
+          
           window.location.reload();
           """
           with open(output_file, 'w', encoding='utf-8') as f:
               f.write(js_code)
-          print(f"✅ Da xu ly xong {{len(cookie_pool)}} acc.")
+          print(f"✅ Da xu ly xong {len(cookie_pool)} acc.")
 
       - name: Push Result
         run: |
