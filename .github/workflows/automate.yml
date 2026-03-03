@@ -3,8 +3,8 @@ name: Manual Convert Cookie
 on:
   push:
     paths:
-      - 'input_cookies/**' # Tự chạy khi bác ném file vào folder này
-  workflow_dispatch:      # Nút bấm chạy thủ công
+      - 'input_cookies/**'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Chạy Logic Chuyển Đổi (Python nhúng)
+      - name: Chạy Logic Chuyển Đổi (Universal Regex)
         shell: python
         run: |
           import os, re, json
@@ -30,25 +30,35 @@ jobs:
                   if os.path.isfile(filepath):
                       with open(filepath, 'r', encoding='utf-8') as f:
                           content = f.read()
-                          # Regex cào mã cực mạnh
-                          n_id = re.search(r'NetflixId=([^;\s\n]+)', content)
-                          s_id = re.search(r'SecureNetflixId=([^;\s\n]+)', content)
+                          
+                          # Regex siêu linh hoạt: Bỏ qua dấu bằng, dấu cách hay dấu Tab
+                          # Nó sẽ tìm chữ NetflixId và hốt đoạn mã phía sau
+                          n_id = re.search(r'NetflixId["\s=|\t]+([^\s"|;]+)', content)
+                          s_id = re.search(r'SecureNetflixId["\s=|\t]+([^\s"|;]+)', content)
+                          
                           if n_id and s_id:
                               cookie_pool.append({"n": n_id.group(1).strip(), "s": s_id.group(1).strip()})
+                              print(f"✅ Đã hốt được: {filename}")
+                          else:
+                              print(f"⚠️ Không tìm thấy mã trong: {filename}")
           
-          # Tạo nội dung JS xoay vòng
+          # Nếu không tìm thấy gì, tạo file rỗng để không lỗi
+          if not cookie_pool:
+              print("❌ Toang rồi! Không tìm thấy acc nào cả.")
+              exit(1)
+
           js_code = f"""
           const pool = {json.dumps(cookie_pool)};
           const pick = pool[Math.floor(Math.random() * pool.length)];
           document.cookie = "NetflixId=" + pick.n + ";domain=.netflix.com;path=/;secure";
           document.cookie = "SecureNetflixId=" + pick.s + ";domain=.netflix.com;path=/;secure";
-          alert("Đã xoay vòng acc! Tổng kho đang có: {len(cookie_pool)} acc.");
+          alert("Nạp acc thành công! Kho đang có: {len(cookie_pool)} acc.");
           window.location.reload();
           completion();
           """
           with open(output_file, 'w', encoding='utf-8') as f:
               f.write(js_code)
-          print(f"Xử lý xong {len(cookie_pool)} acc.")
+          print(f"🚀 Tổng cộng xử lý xong {len(cookie_pool)} acc.")
 
       - name: Lưu kết quả lên GitHub
         run: |
