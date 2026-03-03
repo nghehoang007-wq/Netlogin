@@ -1,51 +1,33 @@
-name: Manual Convert Cookie
-
-on:
-  push:
-    paths:
-      - 'input_cookies/**'
-  workflow_dispatch:
-
-permissions:
-  contents: write
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
       - name: Generate script.js
         run: |
-          python3 << EOF
-          import os, re, json, sys
+          cat << 'EOF' > generate.py
+import os, re, json, sys
 
-          input_folder = 'input_cookies'
-          output_file = 'script.js'
-          cookie_pool = []
+input_folder = 'input_cookies'
+output_file = 'script.js'
+cookie_pool = []
 
-          if os.path.exists(input_folder):
-              for filename in os.listdir(input_folder):
-                  filepath = os.path.join(input_folder, filename)
-                  if os.path.isfile(filepath):
-                      with open(filepath, 'r', encoding='utf-8') as f:
-                          content = f.read()
+if os.path.exists(input_folder):
+    for filename in os.listdir(input_folder):
+        filepath = os.path.join(input_folder, filename)
+        if os.path.isfile(filepath):
+            with open(filepath, 'r', encoding='utf-8') as f:
+                content = f.read()
 
-                          n_match = re.search(r'NetflixId["\s=|\t]+((?:ct|v%3D)[^\s"|;]{20,})', content)
-                          s_match = re.search(r'SecureNetflixId["\s=|\t]+(v%3D3%26mac%3D[^\s"|;]{20,})', content)
+                n_match = re.search(r'NetflixId["\s=|\t]+((?:ct|v%3D)[^\s"|;]{20,})', content)
+                s_match = re.search(r'SecureNetflixId["\s=|\t]+(v%3D3%26mac%3D[^\s"|;]{20,})', content)
 
-                          if n_match and s_match:
-                              cookie_pool.append({
-                                  "n": n_match.group(1).strip(),
-                                  "s": s_match.group(1).strip()
-                              })
+                if n_match and s_match:
+                    cookie_pool.append({
+                        "n": n_match.group(1).strip(),
+                        "s": s_match.group(1).strip()
+                    })
 
-          if not cookie_pool:
-              print("No valid accounts found.")
-              sys.exit(1)
+if not cookie_pool:
+    print("No valid accounts found.")
+    sys.exit(1)
 
-          js_code = f"""
+js_code = f"""
 const pool = {json.dumps(cookie_pool)};
 const pick = pool[Math.floor(Math.random() * pool.length)];
 
@@ -55,16 +37,10 @@ document.cookie = "SecureNetflixId=" + pick.s + ";domain=.netflix.com;path=/;sec
 console.log("Injected account. Total pool: {len(cookie_pool)}");
 """
 
-          with open(output_file, 'w', encoding='utf-8') as f:
-              f.write(js_code)
+with open(output_file, 'w', encoding='utf-8') as f:
+    f.write(js_code)
 
-          print("Generated script.js successfully.")
-          EOF
+print("Generated script.js successfully.")
+EOF
 
-      - name: Push Result
-        run: |
-          git config --global user.name "NetBot"
-          git config --global user.email "bot@github.com"
-          git add script.js
-          git commit -m "Auto Update $(date)" || exit 0
-          git push
+          python3 generate.py
