@@ -1,0 +1,59 @@
+name: Manual Convert Cookie
+
+on:
+  push:
+    paths:
+      - 'input_cookies/**' # Tự chạy khi bác ném file vào folder này
+  workflow_dispatch:      # Nút bấm chạy thủ công
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Chạy Logic Chuyển Đổi (Python nhúng)
+        shell: python
+        run: |
+          import os, re, json
+          
+          input_folder = 'input_cookies'
+          output_file = 'script.js'
+          cookie_pool = []
+          
+          if os.path.exists(input_folder):
+              for filename in os.listdir(input_folder):
+                  filepath = os.path.join(input_folder, filename)
+                  if os.path.isfile(filepath):
+                      with open(filepath, 'r', encoding='utf-8') as f:
+                          content = f.read()
+                          # Regex cào mã cực mạnh
+                          n_id = re.search(r'NetflixId=([^;\s\n]+)', content)
+                          s_id = re.search(r'SecureNetflixId=([^;\s\n]+)', content)
+                          if n_id and s_id:
+                              cookie_pool.append({"n": n_id.group(1).strip(), "s": s_id.group(1).strip()})
+          
+          # Tạo nội dung JS xoay vòng
+          js_code = f"""
+          const pool = {json.dumps(cookie_pool)};
+          const pick = pool[Math.floor(Math.random() * pool.length)];
+          document.cookie = "NetflixId=" + pick.n + ";domain=.netflix.com;path=/;secure";
+          document.cookie = "SecureNetflixId=" + pick.s + ";domain=.netflix.com;path=/;secure";
+          alert("Đã xoay vòng acc! Tổng kho đang có: {len(cookie_pool)} acc.");
+          window.location.reload();
+          completion();
+          """
+          with open(output_file, 'w', encoding='utf-8') as f:
+              f.write(js_code)
+          print(f"Xử lý xong {len(cookie_pool)} acc.")
+
+      - name: Lưu kết quả lên GitHub
+        run: |
+          git config --global user.name "Netflix-Bot"
+          git config --global user.email "bot@github.com"
+          git add script.js
+          git commit -m "🚀 Update script.js [$(date)]" || exit 0
+          git push
