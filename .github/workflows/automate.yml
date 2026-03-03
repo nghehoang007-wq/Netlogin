@@ -1,24 +1,4 @@
-name: Manual Convert Cookie
-
-on:
-  push:
-    paths:
-      - 'input_cookies/**'
-  workflow_dispatch:
-
-permissions:
-  contents: write
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Chạy Logic Chuyển Đổi (Universal Regex)
-        shell: python
-        run: |
-          import os, re, json
+import os, re, json
           
           input_folder = 'input_cookies'
           output_file = 'script.js'
@@ -31,39 +11,30 @@ jobs:
                       with open(filepath, 'r', encoding='utf-8') as f:
                           content = f.read()
                           
-                          # Regex siêu linh hoạt: Bỏ qua dấu bằng, dấu cách hay dấu Tab
-                          # Nó sẽ tìm chữ NetflixId và hốt đoạn mã phía sau
-                          n_id = re.search(r'NetflixId["\s=|\t]+([^\s"|;]+)', content)
-                          s_id = re.search(r'SecureNetflixId["\s=|\t]+([^\s"|;]+)', content)
+                          # Tìm NetflixId (thường bắt đầu bằng ct%3D hoặc v%3D)
+                          n_id = re.search(r'NetflixId["\s=|\t]+((?:ct|v%3D)[^\s"|;]+)', content)
+                          # Tìm SecureNetflixId (phải chứa mã mac%3D)
+                          s_id = re.search(r'SecureNetflixId["\s=|\t]+(v%3D3%26mac%3D[^\s"|;]+)', content)
                           
                           if n_id and s_id:
-                              cookie_pool.append({"n": n_id.group(1).strip(), "s": s_id.group(1).strip()})
-                              print(f"✅ Đã hốt được: {filename}")
-                          else:
-                              print(f"⚠️ Không tìm thấy mã trong: {filename}")
+                              n_val = n_id.group(1).strip()
+                              s_val = s_id.group(1).strip()
+                              # Chỉ lấy nếu hai mã này khác nhau và không phải dấu phẩy
+                              if n_val != s_val and len(n_val) > 10:
+                                  cookie_pool.append({"n": n_val, "s": s_val})
+                                  print(f"✅ Hốt acc ngon: {filename}")
           
-          # Nếu không tìm thấy gì, tạo file rỗng để không lỗi
           if not cookie_pool:
-              print("❌ Toang rồi! Không tìm thấy acc nào cả.")
+              print("❌ Không có acc nào đạt chuẩn!")
               exit(1)
 
           js_code = f"""
-          const pool = {json.dumps(cookie_pool)};
-          const pick = pool[Math.floor(Math.random() * pool.length)];
-          document.cookie = "NetflixId=" + pick.n + ";domain=.netflix.com;path=/;secure";
-          document.cookie = "SecureNetflixId=" + pick.s + ";domain=.netflix.com;path=/;secure";
-          alert("Nạp acc thành công! Kho đang có: {len(cookie_pool)} acc.");
-          window.location.reload();
-          completion();
-          """
+const pool = {json.dumps(cookie_pool)};
+const pick = pool[Math.floor(Math.random() * pool.length)];
+document.cookie = "NetflixId=" + pick.n + ";domain=.netflix.com;path=/;secure";
+document.cookie = "SecureNetflixId=" + pick.s + ";domain=.netflix.com;path=/;secure";
+alert("Nạp acc thành công! Kho đang có: {len(cookie_pool)} acc sống.");
+window.location.reload();
+completion();"""
           with open(output_file, 'w', encoding='utf-8') as f:
               f.write(js_code)
-          print(f"🚀 Tổng cộng xử lý xong {len(cookie_pool)} acc.")
-
-      - name: Lưu kết quả lên GitHub
-        run: |
-          git config --global user.name "Netflix-Bot"
-          git config --global user.email "bot@github.com"
-          git add script.js
-          git commit -m "🚀 Update script.js [$(date)]" || exit 0
-          git push
