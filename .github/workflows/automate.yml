@@ -3,8 +3,8 @@ name: Manual Convert Cookie
 on:
   push:
     paths:
-      - 'input_cookies/**' # Tự động chạy khi bác upload file mới
-  workflow_dispatch:      # Nút bấm chạy thủ công trong tab Actions
+      - 'input_cookies/**'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Run Universal Cookie Converter
+      - name: Run Python Converter
         shell: python
         run: |
           import os, re, json
@@ -30,52 +30,44 @@ jobs:
                   if os.path.isfile(filepath):
                       with open(filepath, 'r', encoding='utf-8') as f:
                           content = f.read()
-                          
-                          # Regex siêu cấp: Lọc sạch mã NetflixId và SecureNetflixId
-                          # Chỉ lấy chuỗi có độ dài > 20 để tránh lấy nhầm rác
+                          # Regex siêu cấp: Chỉ lấy mã nếu dài trên 20 ký tự (tránh lấy nhầm dấu phẩy)
                           n_match = re.search(r'NetflixId["\s=|\t]+((?:ct|v%3D)[^\s"|;]{20,})', content)
                           s_match = re.search(r'SecureNetflixId["\s=|\t]+(v%3D3%26mac%3D[^\s"|;]{20,})', content)
                           
                           if n_match and s_match:
-                              n_val = n_match.group(1).strip()
-                              s_val = s_match.group(1).strip()
-                              
-                              # Kiểm tra điều kiện: n và s phải khác nhau (tránh lấy trùng mã mac)
-                              if n_val != s_val:
-                                  cookie_pool.append({"n": n_val, "s": s_val})
-                                  print(f"✅ Đã thêm acc từ: {filename}")
-
+                              cookie_pool.append({"n": n_match.group(1).strip(), "s": s_match.group(1).strip()})
+          
           if not cookie_pool:
-              print("❌ Lỗi: Không tìm thấy tài khoản nào hợp lệ trong folder input_cookies!")
+              print("❌ Khong tim thay acc hop le!")
               exit(1)
 
-          # Tạo mã JavaScript hoàn chỉnh cho iOS Shortcuts
           js_code = f"""
 const pool = {json.dumps(cookie_pool)};
 const pick = pool[Math.floor(Math.random() * pool.length)];
 
-// Bơm Cookie
+// 1. Bơm Cookie vào hệ thống
 document.cookie = "NetflixId=" + pick.n + ";domain=.netflix.com;path=/;secure";
 document.cookie = "SecureNetflixId=" + pick.s + ";domain=.netflix.com;path=/;secure";
 
-alert("Nạp acc thành công! Hệ thống đang có: {len(cookie_pool)} acc.");
+// 2. Thông báo cho người dùng
+alert("Nạp acc thành công! Kho đang có: {len(cookie_pool)} acc.");
 
-// Sửa lỗi Safari: Gọi completion trước khi reload
+// 3. Báo cáo hoàn thành cho Phím tắt TRƯỚC khi tải lại trang
 if (typeof completion === "function") {{
     completion();
 }}
 
-// Reload trang để áp dụng cookie
+// 4. Cuối cùng mới làm mới trang web
 window.location.reload();
 """
           with open(output_file, 'w', encoding='utf-8') as f:
               f.write(js_code)
-          print(f"🚀 Thành công: Đã tạo file script.js với {len(cookie_pool)} acc.")
+          print(f"✅ Da xu ly xong {len(cookie_pool)} acc.")
 
-      - name: Push Result to GitHub
+      - name: Push Result
         run: |
           git config --global user.name "Netflix-Bot"
           git config --global user.email "bot@github.com"
           git add script.js
-          git commit -m "🚀 Auto Update Cookies [$(date)]" || exit 0
+          git commit -m "🚀 Auto Update [$(date)]" || exit 0
           git push
