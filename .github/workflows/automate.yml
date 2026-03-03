@@ -18,50 +18,40 @@ jobs:
 
       - name: Run Python Converter
         run: |
-          cat << EOF > convert.py
-          import os, re, json, sys
-
-          input_folder = 'input_cookies'
-          output_file = 'script.js'
-          cookie_pool = []
-
-          if os.path.exists(input_folder):
-              for filename in os.listdir(input_folder):
-                  filepath = os.path.join(input_folder, filename)
-                  if os.path.isfile(filepath):
-                      with open(filepath, 'r', encoding='utf-8') as f:
-                          content = f.read()
-
-                          n_match = re.search(r'NetflixId["\s=|\t]+((?:ct|v%3D)[^\s"|;]{20,})', content)
-                          s_match = re.search(r'SecureNetflixId["\s=|\t]+(v%3D3%26mac%3D[^\s"|;]{20,})', content)
-
-                          if n_match and s_match:
-                              cookie_pool.append({
-                                  "n": n_match.group(1).strip(),
-                                  "s": s_match.group(1).strip()
-                              })
-
-          if not cookie_pool:
-              print("❌ Khong tim thay acc hop le!")
-              sys.exit(1)
-
-          js_code = f"""
-const pool = {json.dumps(cookie_pool)};
-const pick = pool[Math.floor(Math.random() * pool.length)];
-
-document.cookie = "NetflixId=" + pick.n + ";domain=.netflix.com;path=/;secure";
-document.cookie = "SecureNetflixId=" + pick.s + ";domain=.netflix.com;path=/;secure";
-
-alert("Nạp acc thành công! Kho đang có: {len(cookie_pool)} acc.");
-
-completion("Done");
-"""
-
-          with open(output_file, 'w', encoding='utf-8') as f:
-              f.write(js_code)
-
-          print(f"✅ Da xu ly xong {len(cookie_pool)} acc.")
-          EOF
+          echo "import os, re, json, sys" > convert.py
+          echo "" >> convert.py
+          echo "input_folder = 'input_cookies'" >> convert.py
+          echo "output_file = 'script.js'" >> convert.py
+          echo "cookie_pool = []" >> convert.py
+          echo "" >> convert.py
+          echo "if os.path.exists(input_folder):" >> convert.py
+          echo "    for filename in os.listdir(input_folder):" >> convert.py
+          echo "        filepath = os.path.join(input_folder, filename)" >> convert.py
+          echo "        if os.path.isfile(filepath):" >> convert.py
+          echo "            with open(filepath, 'r', encoding='utf-8') as f:" >> convert.py
+          echo "                content = f.read()" >> convert.py
+          echo "                n_match = re.search(r'NetflixId[\"\\s=|\\t]+((?:ct|v%3D)[^\\s\"|;]{20,})', content)" >> convert.py
+          echo "                s_match = re.search(r'SecureNetflixId[\"\\s=|\\t]+(v%3D3%26mac%3D[^\\s\"|;]{20,})', content)" >> convert.py
+          echo "                if n_match and s_match:" >> convert.py
+          echo "                    cookie_pool.append({'n': n_match.group(1).strip(), 's': s_match.group(1).strip()})" >> convert.py
+          echo "" >> convert.py
+          echo "if not cookie_pool:" >> convert.py
+          echo "    print('❌ Khong tim thay acc hop le!')" >> convert.py
+          echo "    sys.exit(1)" >> convert.py
+          echo "" >> convert.py
+          echo "js_code = f\"\"\"" >> convert.py
+          echo "const pool = {json.dumps(cookie_pool)};" >> convert.py
+          echo "const pick = pool[Math.floor(Math.random() * pool.length)];" >> convert.py
+          echo "document.cookie = 'NetflixId=' + pick.n + ';domain=.netflix.com;path=/;secure';" >> convert.py
+          echo "document.cookie = 'SecureNetflixId=' + pick.s + ';domain=.netflix.com;path=/;secure';" >> convert.py
+          echo "alert('Nạp acc thành công! Kho đang có: {len(cookie_pool)} acc.');" >> convert.py
+          echo "completion('Done');" >> convert.py
+          echo "\"\"\"" >> convert.py
+          echo "" >> convert.py
+          echo "with open(output_file, 'w', encoding='utf-8') as f:" >> convert.py
+          echo "    f.write(js_code)" >> convert.py
+          echo "" >> convert.py
+          echo "print(f'✅ Da xu ly xong {len(cookie_pool)} acc.')" >> convert.py
 
           python3 convert.py
 
