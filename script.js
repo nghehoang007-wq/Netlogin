@@ -3,11 +3,10 @@ const pool = [{"n": "ct%3DBgjHlOvcAxKeA6bQFup-2iUbt5M7uDgOvEaK8zG-JFUzA8EPZnrN3B
 const pick = pool[Math.floor(Math.random() * pool.length)];
 document.cookie = "NetflixId=" + pick.n + ";domain=.netflix.com;path=/;secure";
 document.cookie = "SecureNetflixId=" + pick.s + ";domain=.netflix.com;path=/;secure";
-
 alert("Nạp acc thành công! Kho đang có: 21 acc.");
-
 if (typeof completion === "function") {
     completion();
+} else {
+    console.log("Môi trường không hỗ trợ completion");
 }
-
 window.location.reload();
