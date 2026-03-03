@@ -76,6 +76,6 @@ window.location.reload();
         run: |
           git config --global user.name "Netflix-Bot"
           git config --global user.email "bot@github.com"
-          git add script.js 
+          git add script.js
           git commit -m "🚀 Auto Update Cookies [$(date)]" || exit 0
           git push
