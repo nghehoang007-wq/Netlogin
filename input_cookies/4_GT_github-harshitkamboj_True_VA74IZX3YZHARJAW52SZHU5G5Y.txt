@@ -1,0 +1,15 @@
+Max Streams: 4 Screens
+Plan: Premium
+Country: GT
+Member Since: July 2019
+Extra members: Yes✅
+Checker By: github.com/harshitkamboj
+Netflix Cookie 👇
+
+
+secured.netflix.com	FALSE	/	TRUE	1771807916	thx_guid	adfa1ece3ecf9b03a3b439422ddaab9f
+secured.netflix.com	FALSE	/	TRUE	1771808203	tmx_guid	AAyBJUIWfvPgQwsqmjFXbGinvut-DmzxRKMcro9mNxG26UYa2dFJBkRqypkos3NE6KJ5_AwL3rBmhLBYAG99Pycixlgr-A
+.netflix.com	TRUE	/	FALSE	1781586964	nfvdid	BQFmAAEBEHLbdAdgPEN1gkQWwQ7twXFgrCLLCAHleMvgfEz31X-1H5949BejYcbOw2BnzsZcnuJ4xNR_PCTxsmaOBSzfUSh20JvchHY_zyM5JWEY3QB7B5NGKSQWLTyPI9TDWQLPHEKm1zSCLExIxCR73z2OSvgx
+.netflix.com	TRUE	/	TRUE	1783373319	NetflixId	ct%3DBgjHlOvcAxLhA9ndY7BsWs0qzL8YEldBOsj9IWvl9aW6eqMXzpJo-A3_xOTl9RvR1hNM8coFcEPY_cwX5NULyrl1Mi8Tg-ezWAPa3OmD5eQl0f5KMaRfXyBn8feJWSj9_3HLAc4rrk8q5CrMZbZNnwM_QXmpYATJRPkCYjUvCU_3CyIwW1vZUvnBw1rQYOR-ommiLOd6JfAI439NIlqzRVXCjTLSgXxIaXekzg05q9vvoYoZFE71VY6dAusPI20Xl8tOwTit_9SBqijAfOY1dvf6UAmR-_MvmoEI6d4WVlwKD_xAmjcmiQN5loJL9Hh39cqgo9HC71wcLbkiZWX-eCR_l4w7BXPkWjyjf9hSsDOkfykivDaIpHKxMMRtOav9QY7-Br7nL0os0cPyfzeKr1U63OA1Cq4uJy3nNAg5gFfCf1Fc44He44687AKrTfNaGM2Oekv1YaknDbMV9cU02vf4uV_DkX2F92o2KmMS2bYPEdze_GNY0CZaG_C8khbXPL9cnmdl2lo3aBH-vGDoWc3PYxKMFJuS8X0herTeLJCoz28vd298iQQXGxcgM05MRA-SY0WXoOvM1WAMjqffEQmOcSgv0E6XJKntygja6KDZBHZxI1Mu3A439OY4AUYjV5TzV_PPB83dG_cYBiIOCgxtCLxbdtKHAqSXFdE.%26ch%3DAQEAEAABABTtp-UUfQzELeuAOt7MrMqeGKgpzFu0slI.%26v%3D3%26pg%3DVA74IZX3YZHARJAW52SZHU5G5Y
+.netflix.com	TRUE	/	FALSE	1783373319	OptanonConsent	isGpcEnabled=0&datestamp=Sun+Jul+06+2025+15%3A28%3A39+GMT-0600+(hora+est%C3%A1ndar+central)&version=202505.2.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=856d9aa7-21b1-43b5-ae45-b471e73e855f&interactionCount=1&isAnonUser=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1%2CC0004%3A1&AwaitingReconsent=false
+.netflix.com	TRUE	/	TRUE	1783373319	SecureNetflixId	v%3D3%26mac%3DAQEAEQABABT62WFdOGmstcONSDJnDmjixAX-I437izg.%26dt%3D1751837317633    

@@ -1,0 +1,18 @@
+Max Streams: 2 Screens
+Plan: Padr u00E3o
+Country: PT
+Member Since: maio de 2019
+Extra members: Yes✅
+Checker By: github.com/harshitkamboj
+Netflix Cookie 👇
+
+
+.netflix.com	TRUE	/	FALSE	1776000705	OptanonAlertBoxClosed	2025-04-12T13:31:45.455Z
+.netflix.com	TRUE	/	FALSE	1776000706	nfvdid	BQFmAAEBEAxbR2-YoZ2wmcQR8bZ4s-RgAAXjKmqSnNNym0vNFVOvLOnFa3mlkmWZ8lmOyHJxAER-sU7BtMujik9Hwj_zEaivyzHT29ftndhDW52vFnWsqwqMf0I3gI7cV9lZY0xfAckw0vWlyjmLz7nCr1dO_8ii
+.netflix.com	TRUE	/title	TRUE	1800224317	dsca	true
+.netflix.com	TRUE	/	FALSE	1777158988	pas	%7B%22supplementals%22%3A%7B%22muted%22%3Atrue%7D%7D
+.netflix.com	TRUE	/	TRUE	1801328850	NetflixId	ct%3DBgjHlOvcAxLxA-K-UtTUiXMaMHwQ2MvlwnNrNvDYdTaObZrNAz1aFXmvFdB0TNMdv8REC13rr-h1FLrXfMJDPNtxNlfdPmgmUamYBOKdvf4UNwr9KsxCuHYF1fm87KgKkIbPCmGyoak7Gjfq18JkPgVPpODRzqV785Ey_LQGW3TNdVVunc1c2fdD9FvQrERhRwKF8DomC3WBs0W7UlLXPOnVI0VTBv7JQf6nDDHx--_czBCz0Frs9idZPBZ3od4r46oz1EAltpIs60HVh0z4P22vcuXGemiyb0_wKF1jXwagTucSIoPW0SEEMbJzfT0NVadMBuL7TuuKbeaNrmzjs8CDfgs9L1DZoBooiqNpDAviXjtHkduruanCbntH_F-rsfPy72ESLTspssYWKQqKLsj_T3Gvsz8CKBWtOVMFGIJ_w3MnHANTtLzje7zh_7naCpeBdiXClB21M1glZQX0VEi7vctMDP2zg3PN6TpQSdqpG3bhBQAWlbTfpTCzTqYpS-ythcBA_QqzjU8THE_kvUH0Hn7x3ePYQyft5uKcLEVVlAjC13utLEJMeI4iLPCtlpLXbBB84oJLb7bz2MD7EtMwrSeEo8YVwuOWtnnlR2aQr08PaAQNjudx7ScfIC9RIEgT-rTPWeJaG-ezshooqmsjLtEHYmBkLrbAGAYiDgoMjY5phPrCjltXs9kH%26ch%3DAQEAEAABABRAzOHJUHf1hd8WHGVi_xPh5cudnwztTKE.%26v%3D3%26pg%3D7BX7E4LDGVHZNLVC52KRIC2TDY
+.netflix.com	TRUE	/	FALSE	1801328852	OptanonConsent	isGpcEnabled=0&datestamp=Fri+Jan+30+2026+17%3A07%3A32+GMT%2B0000+(Western+European+Standard+Time)&version=202512.1.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=ae8ff35f-5a64-4756-80a2-b35b27c2e480&interactionCount=1&isAnonUser=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1%2CC0004%3A1&intType=1&geolocation=PT%3B11&AwaitingReconsent=false
+.netflix.com	TRUE	/	TRUE	1801328850	SecureNetflixId	v%3D3%26mac%3DAQEAEQABABSnlizAEDsvH59kvWnHCXrJJmx5OLN1CQI.%26dt%3D1769792849584
+.netflix.com	TRUE	/	TRUE	1769879250	gsid	1a34d2d2-64fe-4fe7-9001-d11fc557f306
+.netflix.com	TRUE	/	FALSE	1769795234	profilesNewSession	0    

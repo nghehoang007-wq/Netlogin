@@ -1,0 +1,27 @@
+Max Streams: 4 Screens
+Plan: Premium
+Country: VN
+Member Since: February 2020
+Extra members: No❌
+Checker By: github.com/harshitkamboj
+Netflix Cookie 👇
+
+
+.netflix.com	TRUE	/	TRUE	1768959951	gsid	1219f1dd-0524-477e-b41e-84c345b69022
+.netflix.com	TRUE	/	TRUE	1800409629	NetflixId	v%3D3%26ct%3DBgjHlOvcAxKIA35HC8LOgzyA9ZhL4NOxZx4UOvTNq62oK5U47W7rx7x3GNjtLwPU-bGKbCryFQE9n3Hsc7-qd1ENhIO8KxHYFa61q4iGi-z2l7YgyqnT_Gfz_Nl5rVFMhU7qnmPRXYDMtMKcxxQBhprbZfFVo1EIFPotA5fHbgEK1YuPClsbYoRAdVHXy_WfHnn8iz6l1KOvTRcSY7FSfuVO1o7uF7v2eYGO4I03-eSSuY4RVAemZ39eRpDRoqlAW1HuwKz6vkLr4xC5JyO2LY5xTosCHOURDkFYRpez-PWTbakwtMrtmecro_omRemAgGKEGZip08FdYyCzYuTDtpuzCGG-mbkWw_M7NDQudid9xMnKkjPKTW5XnSVrk57Td2hL_ze029GR25ZXuuw0VSybAWs9UrXEIfwtsdPSw7sePvsOi5k-P0MX9OyGE6YEH1W9NEPnvEGwku-x9aRoO2eEH1dhcVaVyeUfH4w9_bMAzhEZgJp0l3AK7MScYQBk_aSzMfnEThXS5hj-4lILBBfkGAYiDgoM95SD_DEJdzv7p-S4%26pg%3DPPKWG5LKYZFH7C4TGDFZHGABBU%26ch%3DAQEAEAABABQW-szqpPSbmIpz0NzKV0Gjd24n73FQ24o.
+.netflix.com	TRUE	/	FALSE	1800409630	OptanonConsent	isGpcEnabled=0&datestamp=Tue+Jan+20+2026+08%3A47%3A10+GMT%2B0700+(Gi%E1%BB%9D+%C4%90%C3%B4ng+D%C6%B0%C6%A1ng)&version=202512.1.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=c9e9994a-51bb-41c5-8b8f-197109aedd3a&interactionCount=1&isAnonUser=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1%2CC0004%3A1&crTime=1768873556961&AwaitingReconsent=false
+.netflix.com	TRUE	/	FALSE	1776649629	netflix-sans-bold-3-loaded	true
+.netflix.com	TRUE	/	FALSE	1776649629	netflix-sans-normal-3-loaded	true
+.netflix.com	TRUE	/	FALSE	1800409629	nfvdid	BQFmAAEBEBk6yk5zApsM48aWqqLp12tggh2rqNIiU6fPgZooUYEIP1qt4iGfefs8k_ATvaiYU6S-1rNwtBjVKf7KL6pnfpQiF6HQLbaonyWZRJyusYdlzuFRAbxZUuu7RnFrrFdikAmjnbR_Y51BRQZjGPdL5hk6
+.netflix.com	TRUE	/	FALSE	1768876165	profilesNewSession	0
+.netflix.com	TRUE	/	TRUE	1800409629	SecureNetflixId	v%3D3%26mac%3DAQEAEQABABQWlY0BRsdRNQAoGjqzFymSpqrVPMNrBpQ.%26dt%3D1768873632474
+.netflix.com	TRUE	/	FALSE	1768884381	flwssn	1c59d5ae-58e2-48b4-bbd9-cdc2974dcf16    
+.netflix.com	TRUE	/	TRUE	1768959951	gsid	1219f1dd-0524-477e-b41e-84c345b69022
+.netflix.com	TRUE	/	FALSE	1768884381	flwssn	1c59d5ae-58e2-48b4-bbd9-cdc2974dcf16
+.netflix.com	TRUE	/	TRUE	1800409629	NetflixId	v%3D3%26ct%3DBgjHlOvcAxKIA35HC8LOgzyA9ZhL4NOxZx4UOvTNq62oK5U47W7rx7x3GNjtLwPU-bGKbCryFQE9n3Hsc7-qd1ENhIO8KxHYFa61q4iGi-z2l7YgyqnT_Gfz_Nl5rVFMhU7qnmPRXYDMtMKcxxQBhprbZfFVo1EIFPotA5fHbgEK1YuPClsbYoRAdVHXy_WfHnn8iz6l1KOvTRcSY7FSfuVO1o7uF7v2eYGO4I03-eSSuY4RVAemZ39eRpDRoqlAW1HuwKz6vkLr4xC5JyO2LY5xTosCHOURDkFYRpez-PWTbakwtMrtmecro_omRemAgGKEGZip08FdYyCzYuTDtpuzCGG-mbkWw_M7NDQudid9xMnKkjPKTW5XnSVrk57Td2hL_ze029GR25ZXuuw0VSybAWs9UrXEIfwtsdPSw7sePvsOi5k-P0MX9OyGE6YEH1W9NEPnvEGwku-x9aRoO2eEH1dhcVaVyeUfH4w9_bMAzhEZgJp0l3AK7MScYQBk_aSzMfnEThXS5hj-4lILBBfkGAYiDgoM95SD_DEJdzv7p-S4%26pg%3DPPKWG5LKYZFH7C4TGDFZHGABBU%26ch%3DAQEAEAABABQW-szqpPSbmIpz0NzKV0Gjd24n73FQ24o.
+.netflix.com	TRUE	/	FALSE	1800409630	OptanonConsent	isGpcEnabled=0&datestamp=Tue+Jan+20+2026+08%3A47%3A10+GMT%2B0700+(Gi%E1%BB%9D+%C4%90%C3%B4ng+D%C6%B0%C6%A1ng)&version=202512.1.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=c9e9994a-51bb-41c5-8b8f-197109aedd3a&interactionCount=1&isAnonUser=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1%2CC0004%3A1&crTime=1768873556961&AwaitingReconsent=false
+.netflix.com	TRUE	/	TRUE	1800409629	SecureNetflixId	v%3D3%26mac%3DAQEAEQABABQWlY0BRsdRNQAoGjqzFymSpqrVPMNrBpQ.%26dt%3D1768873632474
+.netflix.com	TRUE	/	FALSE	1776649629	netflix-sans-bold-3-loaded	true
+.netflix.com	TRUE	/	FALSE	1776649629	netflix-sans-normal-3-loaded	true
+.netflix.com	TRUE	/	FALSE	1800409629	nfvdid	BQFmAAEBEBk6yk5zApsM48aWqqLp12tggh2rqNIiU6fPgZooUYEIP1qt4iGfefs8k_ATvaiYU6S-1rNwtBjVKf7KL6pnfpQiF6HQLbaonyWZRJyusYdlzuFRAbxZUuu7RnFrrFdikAmjnbR_Y51BRQZjGPdL5hk6
+.netflix.com	TRUE	/	FALSE	1768876165	profilesNewSession	0    

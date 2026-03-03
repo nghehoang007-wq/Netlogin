@@ -1,0 +1,21 @@
+Max Streams: 4 Screens
+Plan: Premium
+Country: US
+Member Since: June 2025
+Extra members: Yes✅
+Checker By: github.com/harshitkamboj
+Netflix Cookie 👇
+
+
+.netflix.com	TRUE	/	FALSE	1799210075	nfvdid	BQFmAAEBEDSpD4ZsaSMTWR778dLh9-5g1BfLcmpHSfX8YmytPP3VcBSt_Eq_Qy2jN2N7JnBXN9engRFWKbnlRJB1hG4v96hgUa_4L9hONIOPd0EH39RqSkEJfVVoK1251ISR3xFWPSpKObII3TVA8XcZ4QPek2Mz
+.netflix.com	TRUE	/	TRUE	1799255808	SecureNetflixId	v%3D3%26mac%3DAQEAEQABABStGD8u3Sd3TDWzLBgZ21p7Q2Rzp9vo7s4.%26dt%3D1767719807900
+.netflix.com	TRUE	/	TRUE	1799255808	NetflixId	ct%3DBgjHlOvcAxKbA9RQiC4r0qJidY-o_Qw3R5T6f2GLdcfi2jBQock9fHU0N7tVYS2FbFgKmT9jbLgeyFjTLNZ3iUlDMrNPCFwGlBek8X2QuSjqvJF9FGCZ_GKs0ocTErhwOY2Wg01EdALvaEluYi3gtoK6HDFsQqWvGJiZ7ryO97hPVfoeOyn-RKT1hIWGIJzHv3C-EgchJge8XXNFS67dVhlQ7MJFA9QJHDPkTEsSFvn0LoSKJ-ZFHFMAmeE9goB-42KByXaUU3iGij5fl8GyaIaCZ8AXoS-q9N7upfzOqN1Ye6E_l_yv89vL4in-LTiM7FQ0tY0bdhril4jyZ2FJ6bFuWsGwWkcuo5VCqr09F9pmQpM3UT8RXMKlvlJDJOxsY2zXZEdwLA_31xXt_9ZbovxR_lcDNhuYLSvv_C7yx9t-BCm3DDFgMwDhmWHzYeWoQ2tWrTL_98sU9BC-QiaqIX1uPAO6unoR9ywIjn8ZsCFg9LVOg5wE0o4VfLz4CDzXsEVADvIrzFw5NxsytN-cgpONvH5CU6UnDdQGQTdvRFoHpstCDBgGIg4KDPInRPhJnWpWtuYb0w..%26ch%3DAQEAEAABABQlCeqkosoUY_gfu-oiuZaPK45R1-eKMAE.%26v%3D3%26pg%3DWJTKSU2QZJECTOGHPZYDAL5CNQ
+.netflix.com	TRUE	/	FALSE	1775503298	netflix-sans-bold-3-loaded	true
+.netflix.com	TRUE	/	FALSE	1799263299	OptanonConsent	isGpcEnabled=0&datestamp=Tue+Jan+06+2026+14%3A21%3A39+GMT-0500+(hora+est%C3%A1ndar+oriental)&version=202510.2.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=e5634581-9ce5-469d-9cae-733f66d80ea0&interactionCount=1&isAnonUser=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1%2CC0004%3A1&AwaitingReconsent=false
+.netflix.com	TRUE	/	FALSE	1775503298	netflix-sans-normal-3-loaded	true    
+.netflix.com	TRUE	/	TRUE	1799255808	SecureNetflixId	v%3D3%26mac%3DAQEAEQABABStGD8u3Sd3TDWzLBgZ21p7Q2Rzp9vo7s4.%26dt%3D1767719807900
+.netflix.com	TRUE	/	FALSE	1799210075	nfvdid	BQFmAAEBEDSpD4ZsaSMTWR778dLh9-5g1BfLcmpHSfX8YmytPP3VcBSt_Eq_Qy2jN2N7JnBXN9engRFWKbnlRJB1hG4v96hgUa_4L9hONIOPd0EH39RqSkEJfVVoK1251ISR3xFWPSpKObII3TVA8XcZ4QPek2Mz
+.netflix.com	TRUE	/	FALSE	1799263299	OptanonConsent	isGpcEnabled=0&datestamp=Tue+Jan+06+2026+14%3A21%3A39+GMT-0500+(hora+est%C3%A1ndar+oriental)&version=202510.2.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=e5634581-9ce5-469d-9cae-733f66d80ea0&interactionCount=1&isAnonUser=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1%2CC0004%3A1&AwaitingReconsent=false
+.netflix.com	TRUE	/	FALSE	1775503298	netflix-sans-bold-3-loaded	true
+.netflix.com	TRUE	/	FALSE	1775503298	netflix-sans-normal-3-loaded	true
+.netflix.com	TRUE	/	TRUE	1799255808	NetflixId	ct%3DBgjHlOvcAxKbA9RQiC4r0qJidY-o_Qw3R5T6f2GLdcfi2jBQock9fHU0N7tVYS2FbFgKmT9jbLgeyFjTLNZ3iUlDMrNPCFwGlBek8X2QuSjqvJF9FGCZ_GKs0ocTErhwOY2Wg01EdALvaEluYi3gtoK6HDFsQqWvGJiZ7ryO97hPVfoeOyn-RKT1hIWGIJzHv3C-EgchJge8XXNFS67dVhlQ7MJFA9QJHDPkTEsSFvn0LoSKJ-ZFHFMAmeE9goB-42KByXaUU3iGij5fl8GyaIaCZ8AXoS-q9N7upfzOqN1Ye6E_l_yv89vL4in-LTiM7FQ0tY0bdhril4jyZ2FJ6bFuWsGwWkcuo5VCqr09F9pmQpM3UT8RXMKlvlJDJOxsY2zXZEdwLA_31xXt_9ZbovxR_lcDNhuYLSvv_C7yx9t-BCm3DDFgMwDhmWHzYeWoQ2tWrTL_98sU9BC-QiaqIX1uPAO6unoR9ywIjn8ZsCFg9LVOg5wE0o4VfLz4CDzXsEVADvIrzFw5NxsytN-cgpONvH5CU6UnDdQGQTdvRFoHpstCDBgGIg4KDPInRPhJnWpWtuYb0w..%26ch%3DAQEAEAABABQlCeqkosoUY_gfu-oiuZaPK45R1-eKMAE.%26v%3D3%26pg%3DWJTKSU2QZJECTOGHPZYDAL5CNQ    

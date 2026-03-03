@@ -1,0 +1,16 @@
+Max Streams: 1 Screens
+Plan: Basic
+Country: IN
+Member Since: November 2025
+Extra members: No❌
+Checker By: github.com/harshitkamboj
+Netflix Cookie 👇
+
+
+.netflix.com	FALSE	/	FALSE	1774723105	nfvdid	BQFmAAEBEFYtfgh3HSiQvwGDjWw-xBhgAjluexMldzR18xUzIFPPnrZaWRje-3IHuwOdIvB-o_Um2zWltVhUqPH2aDswbqHKdbprRhTRcxCBVw7LN4ZhCmfPXYc8zgeFrR5HQfjffV_A2_W6yn1eJ8LzJfvACcAr
+.netflix.com	FALSE	/	FALSE	1774723105	OptanonConsent	isGpcEnabled=0&datestamp=Thu+Jan+01+2026+02%3A30%3A18+GMT%2B0530+(India+Standard+Time)&version=202510.2.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=dd26c00b-6ba3-4531-aa86-e8e4b7f1c0e3&interactionCount=1&isAnonUser=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1%2CC0004%3A1&AwaitingReconsent=false
+.netflix.com	TRUE	/	TRUE	1774723105	gsid	bcd78924-5617-48cd-994b-51198b572ce1
+.netflix.com	TRUE	/	TRUE	1774723105	NetflixId	ct%3DBgjHlOvcAxLrA89wufnA7xo_qaHoHXqxUpaAFJIk6gmKNul_5vaNgh0DCoP3ItD6Ui4uSt4Dw8CQUoYb4OUQ2NWjnHkirQoxsuUQHguiSjiYeSL4GJhK8PE3H9eFAqjqoX24tabolFjb3pTWQ8S7Hvtii-fEWgDraxWEXOTfs4xV_6md1tGUhYSPMDuSYRSsuVonBQroJp4i8OxWM0fiD_FBoI0I5gi_DppLsSptHas2iRbAcugf0JhEKoXcc1zRSI94eyWjC8YfhfO8Zew3iCSzDsFALV8_eY2urSZejJx-YsTFrSGqrg1e01cHj9yRC5TLqTacHsAfGXP0hj_PxxenUEoZegGX3yVDvJKrs3TxVEnHwqgPo6qqHQfZujs0m0hXM6qqtc3Rg5NWVj7n797DEWx8E5YjStdTsC3QCkJUIuC5pui1GMRyItMkpcZk4gQcN7LRrpjbVYOZ9TaAlQcKX2uwO3qz2F8B6Jlx_OYSJYNnG1INhjTBKGSKHXcuCxMdsjzUiepEARScIzcTWFy3sjFlhBRpSjYrJ42WNcPRyJ2glhWsB3_aXLwJvKxG27Klff8Tjzi2H3AJS36J_heKjxaAFrLE97PcUBt5jhVBPt_SakaVApKpA2CJzLO0X9g9OTW1JXr1fVEk2uugGR-Spr_JGAYiDgoMHnmo1N2qiQ3e7nc2%26ch%3DAQEAEAABABRnJwlOz6IefZvZJWvLvDFDAdg2HuIxW44.%26v%3D3%26pg%3DEK2JIYDAKJEHLOU2R4I2Y4P3NE
+.netflix.com	TRUE	/	TRUE	1774723105	SecureNetflixId	v%3D3%26mac%3DAQEAEQABABRWOTuD8r0iPZBSO_ldVMsiqLY75x5tNkA.%26dt%3D1767453044788
+.netflix.com	FALSE	/	FALSE	1774723105	netflix-sans-bold-3-loaded	true
+.netflix.com	FALSE	/	FALSE	1774723105	netflix-sans-normal-3-loaded	true

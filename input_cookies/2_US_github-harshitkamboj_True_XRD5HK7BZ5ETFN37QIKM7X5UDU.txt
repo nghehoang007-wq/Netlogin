@@ -1,0 +1,17 @@
+Max Streams: 2 Screens
+Plan: Standard with ads
+Country: US
+Member Since: December 2025
+Extra members: Yes✅
+Checker By: github.com/harshitkamboj
+Netflix Cookie 👇
+
+
+.netflix.com	FALSE	/	FALSE	13441786301715646	nfvdid	BQFmAAEBENQU96_NENrhON0QEtB1TvNgPK4A87IsIRxBEjZepeD3QKHoNCe71h8nzEb5A-VF7wru_Ny3xrNQhu1ODYTA37HIKJt0GaDBxTij1qqQJU-eQyd3OFZ-5CJcKKn3nIDUMFoIMi0af8SPKtjmJO8jk4GY
+.netflix.com	TRUE	/	TRUE	13442523708368444	NetflixId	ct%3DBgjHlOvcAxLpAwvr_9dEqA0qCwDyKaCjS-SmWsJJ5rZlNm9eWEzkwnLn1RJcW6hEWppqjG2j4wCRhiFRoi3Ohrtb6wXzeD7ilQZyWsIPkSGFSOIsLhICljYEbX2oWv8KGK59khrdmx9la-6h5z3tLnJJkR_Z4d0AqKdoXm5gGXZNWHJ0v3mpbxFQndx1tCale5G2kHcwa-Xd7ql68kNIWUnh6MC3OP5qf7QSIqLPXN2XVoYDKyNziII_868Ias4_wR3_5T_jH9BraLCyQOFvOQQSvd9HKBTxtyCHH5eqiRltujJ-gSPF86Pvd-ejVzMJWCXW5mMVFjENexRw-bXI2qAvSBSbhAy0QKmpm3_f4p2--7tr5kIP3JYz78ZBD2vm1P1zkPrS-ETNm7WeL_PWFOnSP1DCAHRL81XMiZ03JgyM1Np45dWfMWWRWKh-g2c1BQMyaeNOgOEy-IIcHfvApJh9nWf8AjoQxN03A_eeQ8F2I-GGrf94YFec4UHoV0WjY8TbSMylCmHyjGPBZwYB6zcBFaaCz5UfivW0JKeky23T1FzDbMQSdM3bUpVxR1L07Yofln-2yERlXyNfukIyXGEyvK7UgXxcL9hyZb0Iukbk_V2iWsiiTqkKAs12ezakXTM5ZVsribGGv6dE-wvFGnyFKBgGIg4KDLWiRzenDJBA4qGukQ..%26ch%3DAQEAEAABABQUTgZ9JzrN3c3UFTWGsPmkSLv_Ht0_s18.%26v%3D3%26pg%3DXRD5HK7BZ5ETFN37QIKM7X5UDU
+.netflix.com	FALSE	/	FALSE	13442523708000000	OptanonConsent	isGpcEnabled=0&datestamp=Tue+Dec+23+2025+12%3A21%3A48+GMT-0600+(Central+Standard+Time)&version=202510.2.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=d80d48b0-09ca-408f-86e8-6dd6030d853f&interactionCount=1&isAnonUser=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1%2CC0004%3A1&AwaitingReconsent=false
+.netflix.com	TRUE	/	TRUE	13442523708368269	SecureNetflixId	v%3D3%26mac%3DAQEAEQABABTbbgyC2SOyIT4sw4PJ3ZXJ51ynJnEO2dI.%26dt%3D1766514109657
+.netflix.com	TRUE	/	TRUE	13411074107302824	gsid	0292924e-feea-44f1-88c0-403eef012c56
+.netflix.com	FALSE	/	FALSE	13418763707302641	netflix-sans-bold-3-loaded	true
+.netflix.com	FALSE	/	FALSE	13418763707302486	netflix-sans-normal-3-loaded	true
+.netflix.com	FALSE	/	FALSE	13410993485103108	profilesNewSession	0    

@@ -1,0 +1,15 @@
+Max Streams: 4 Screens
+Plan: Premium
+Country: DO
+Member Since: julio de 2025
+Extra members: Yes✅
+Checker By: github.com/harshitkamboj
+Netflix Cookie 👇
+
+
+.netflix.com	TRUE	/	TRUE	1795472703	SecureNetflixId	v%3D3%26mac%3DAQEAEQABABQkU8e77QJKL9oL5qgFhBGTZCOdTkktDxo.%26dt%3D1763936703359
+.netflix.com	TRUE	/	FALSE	1771712707	netflix-sans-bold-3-loaded	true
+.netflix.com	TRUE	/	FALSE	1771712707	netflix-sans-normal-3-loaded	true
+.netflix.com	TRUE	/	TRUE	1795472703	NetflixId	v%3D3%26ct%3DBgjHlOvcAxKJAwh6MLSPtESTM62ji4ObigTQWREu3OU3HAPvnj-j6lyEqc8XPfIyDCkHy7fvoi6uNPaBXWAF8KY9571EpV0U88KR5WyksDJOzH8c2dx3APE_-XXR3VrjNPRTFx8rfnGwDfksi-Vkow3mANwsoV8Ju8jhAS5ZMDtLv2AWePmUf7S2gkHt9WOnESpJ5AsyQdlpwL6iFcJDACQiwdoVAB-FLM8KzNkRtW6JInUf9BuW19DAQPuus9ALRMwdL6mOFRS9Hp3JSilMWEbJmHH-70rtBrA_ipOwJ_69X8GyLReuyoiUEj_M2D5FfOsHZE3xTujVtityEe3rLOWK6jCwfBizvW4hG3EQG5yZ9KB9PZjrNI2N3ix34wk19DNiE54m3Qkq_TLuu9mAigAiGNpzpoFrUIQGHI0mHZ7ih5FZjzwPbDpwYSTdQmDdXAmfDNlz5D1tDFEuEneqrEJa9uuokbYKYhzAyFs5tmh7tanQKXvFYU2dTn7sgQlPM371dvAL0JiuxgTGd_aA2K7vVRgGIg4KDIWGe972IxO0NJOODw..%26pg%3D2DTOMGW3OJC3BG2YEITD6LPCRE%26ch%3DAQEAEAABABR4CNOkqvj02IYFwrxI24abpdZuVfVkJQA.
+.netflix.com	TRUE	/	FALSE	1795472705	OptanonConsent	isGpcEnabled=0&datestamp=Sun+Nov+23+2025+17%3A25%3A05+GMT-0500+(Eastern+Standard+Time)&version=202508.1.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=5e649e9a-1355-492a-9317-517df962fd7e&interactionCount=1&isAnonUser=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1%2CC0004%3A1&AwaitingReconsent=false
+.netflix.com	TRUE	/	FALSE	1795472703	nfvdid	BQFmAAEBEAkHM2-dBJ9VGETl4ZqAMvFgAK6EAKk_RE_Gm9_EgtuCPIowvIGrfIFRcRDYju-iNt3ulQyDAOduz2tnvz8qqr-aJTBxUySZXC6wpyaezmHIiKmPNpClhe9kIX_PgzaNxYWi6LM5CKhDpxphB2J9j0Xk    
