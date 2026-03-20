@@ -6,3 +6,4 @@ document.cookie = "NetflixId=" + pick.n + ";domain=.netflix.com;path=/;secure";
 document.cookie = "SecureNetflixId=" + pick.s + ";domain=.netflix.com;path=/;secure";
 
 console.log("Injected account. Total pool: 11");
+ 
