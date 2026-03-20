@@ -11,19 +11,19 @@ if os.path.exists(input_folder):
             with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
                 content = f.read()
 
-            # REGEX MỚI: Bắt mọi giá trị, đéo cần quan tâm nó bắt đầu bằng chữ gì
+            # Vẫn giữ Regex mới: Bắt mọi giá trị, đéo cần quan tâm nó bắt đầu bằng chữ gì
             n_match = re.search(r'NetflixId["\s=|\t]+([^\s"|;]{20,})', content, re.IGNORECASE)
             s_match = re.search(r'SecureNetflixId["\s=|\t]+([^\s"|;]{20,})', content, re.IGNORECASE)
 
-            # CHỈ CẦN CÓ NETFLIX ID LÀ BẾ VÀO LUÔN (Nếu Secure thiếu thì để rỗng)
-            if n_match:
+            # ÉP BUỘC CÓ CẢ 2: Phục vụ riêng cho trình duyệt Web/iPhone
+            if n_match and s_match:
                 cookie_pool.append({
                     "n": n_match.group(1).strip(),
-                    "s": s_match.group(1).strip() if s_match else ""
+                    "s": s_match.group(1).strip()
                 })
 
 if not cookie_pool:
-    print("❌ Đéo tìm thấy con cookie nào hợp lệ!")
+    print("Khong tim thay con cookie nao hop le!")
     sys.exit(1)
 
 js_code = f"""
@@ -31,14 +31,12 @@ const pool = {json.dumps(cookie_pool)};
 const pick = pool[Math.floor(Math.random() * pool.length)];
 
 document.cookie = "NetflixId=" + pick.n + ";domain=.netflix.com;path=/;secure";
-if (pick.s !== "") {{
-    document.cookie = "SecureNetflixId=" + pick.s + ";domain=.netflix.com;path=/;secure";
-}}
+document.cookie = "SecureNetflixId=" + pick.s + ";domain=.netflix.com;path=/;secure";
 
-console.log("✅ Injected account. Total pool: {len(cookie_pool)}");
+console.log("Injected account. Total pool: {len(cookie_pool)}");
 """
 
 with open(output_file, 'w', encoding='utf-8') as f:
     f.write(js_code)
 
-print(f"🔥 Tạo thành công script.js với {len(cookie_pool)} cookie!")
+print(f"Tao thanh cong script.js voi {len(cookie_pool)} cookie!")
